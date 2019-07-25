@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {GetData} from '../Actions/index';
+import {AddCategory} from '../Actions/index';
 
 
 class AddNewCategory extends React.Component {
@@ -15,7 +15,7 @@ class AddNewCategory extends React.Component {
    
     handleOnSubmit = (event) => {
         event.preventDefault();
-        this.props.GetData(this.state);
+        this.props.AddCategory(this.state);
     }
 
     onChange = (e) => {
@@ -61,4 +61,4 @@ const mapStateToProps = (state) => {
     };
 };
 
-export default  connect(mapStateToProps, {GetData})(AddNewCategory);
+export default  connect(mapStateToProps, {AddCategory})(AddNewCategory);

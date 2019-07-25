@@ -7,6 +7,9 @@ export default (state = [], action) => {
         case 'ADDED_CATEGORY':
         return null;
 
+        default:
+        return state;
     }
+    
 
 }
